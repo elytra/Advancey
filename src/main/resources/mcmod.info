@@ -1,0 +1,16 @@
+[
+{
+  "modid": "advancey",
+  "name": "Advancey",
+  "description": "Advancement tweaks",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateJSON": "",
+  "authorList": ["Una 'unascribed' Thomspon"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

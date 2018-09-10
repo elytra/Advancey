@@ -1,0 +1,40 @@
+// See https://github.com/elytra/Skeleton/wiki for what all these values mean
+
+ext {
+	group = 'com.elytradev'
+	projectName = 'Advancey'
+
+	useElytraVersionFormat = true
+	version = '0'
+
+	concreteVersion = '0.5.40'
+	concreteModules = [ 'common', 'reflect' ]
+
+	coremod = null
+	miniVersion = null
+
+	language = 'java'
+
+	forge = '1.12.2-14.23.4.2760'
+	mappings = 'snapshot_20180814'
+
+	enforceLicenseHeaders = false
+
+	verbose = false
+}
+
+if (!ext.early) {
+repositories {
+	// the skeleton already defines mavenCentral, jcenter, and the Elytra repo
+	// will also have Shadowfacts' maven if the language is set to kotlin
+}
+
+dependencies {
+	compile project(':Jankson')
+	shadow project(':Jankson')
+}
+
+shadowJar {
+	relocate 'blue.endless.jankson', project.ext.package+'.repackage.blue.endless.jankson'
+}
+}
